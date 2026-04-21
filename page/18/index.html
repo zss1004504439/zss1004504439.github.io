@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="/styles/main.min.css">
+
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+<meta name="description" content="Welcome my friend">
+<meta property="og:site_name" content="松的Blog">
+<meta property="og:title" content="松的Blog">
+<meta property="og:description" content="Welcome my friend">
+
+<meta property="og:image" content="/images/avatar.png">
+
+<meta property="og:url" content="https://zss1004504439.github.io">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="松的Blog">
+<meta name="twitter:description" content="Welcome my friend">
+
+<meta name="twitter:image" content="/images/avatar.png">
+
+
+  <meta name="generator" content="Gridea Pro 1.1.1">
+  <title>松的Blog</title>
+  
+<meta name="description" content="Welcome my friend">
+<link rel="canonical" href="https://zss1004504439.github.io/page/18/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"松的Blog","url":"https://zss1004504439.github.io","description":"Welcome my friend","potentialAction":{"@type":"SearchAction","query-input":"required name=search_term_string","target":"https://zss1004504439.github.io/search?q={search_term_string}"}}</script>
+<meta property="og:title" content="松的Blog">
+<meta property="og:description" content="Welcome my friend">
+<meta property="og:url" content="https://zss1004504439.github.io/page/18/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="松的Blog">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://zss1004504439.github.io/page/18/">
+<meta name="twitter:title" content="松的Blog">
+<meta name="twitter:description" content="Welcome my friend">
+<meta name="twitter:image" content="/images/avatar.png">
+</head>
+<body class="flavor-theme">
+
+  <header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="top-bar">
+
+      
+      <div class="top-bar__left">
+        
+        <a href="https://zss1004504439.github.io" class="site-avatar-link" aria-label="返回首页">
+          <img class="site-avatar" src="/images/avatar.png" alt="松的Blog" />
+        </a>
+        
+        <a href="https://zss1004504439.github.io" class="site-name-link">松的Blog</a>
+      </div>
+
+      
+      <nav class="top-bar__nav" id="sectionBar">
+        
+        
+        <a class="nav-item" href="/">首页</a>
+        
+        <a class="nav-item" href="/post">博客</a>
+        
+        <a class="nav-item" href="/memos">闪念</a>
+        
+        <a class="nav-item" href="/archives">归档</a>
+        
+        <a class="nav-item" href="/tags">标签</a>
+        
+        <a class="nav-item" href="/links">友链</a>
+        
+        <a class="nav-item" href="/post/about">关于</a>
+        
+        
+      </nav>
+
+      
+      <div class="top-bar__right">
+        <button class="btn-icon btn-search search-btn" id="btnSearch" type="button" aria-label="搜索">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="btn-icon btn-nav-toggle mobile-only" id="btnNavToggle" type="button" aria-label="切换导航">
+          <div class="hamburger" id="hamburger">
+            <span class="hamburger__line hamburger__line--top"></span>
+            <span class="hamburger__line hamburger__line--bottom"></span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<div class="header-spacer"></div>
+
+<script>
+(function(){
+  var btn = document.getElementById('btnNavToggle');
+  var nav = document.getElementById('sectionBar');
+  var hamburger = document.getElementById('hamburger');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    nav.classList.toggle('top-bar__nav--open');
+    if (hamburger) hamburger.classList.toggle('is-active');
+  });
+  nav.querySelectorAll('.nav-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      nav.classList.remove('top-bar__nav--open');
+      if (hamburger) hamburger.classList.remove('is-active');
+    });
+  });
+})();
+</script>
+
+  <main class="site-main" role="main">
+    
+
+
+
+
+<div class="container">
+  
+  
+  <section class="section-popular">
+    <div class="section-header">
+      <h2 class="section-title">热门文章</h2>
+      <a href="/post" class="section-more meta-text">查看全部 &rarr;</a>
+    </div>
+    <div class="compact-grid">
+      
+       <article class="post-card post-card--compact">
+  <a href="/post/background-clip/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">background-clip</h3>
+      <div class="post-card__meta meta-text">2019-09-10</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/vwandrem-shi-xian-yi-dong-duan-bu-ju/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">vw&amp;rem实现移动端布局</h3>
+      <div class="post-card__meta meta-text">2019-09-10</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/zheng-ze-huo-qu-url-can-shu/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">正则获取url参数</h3>
+      <div class="post-card__meta meta-text">2019-09-10</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/css3-19-chong-loadingjia-zai-dong-xiao/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">CSS3 19种LOADING（加载）动效</h3>
+      <div class="post-card__meta meta-text">2019-09-09</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/ling-huo-yun-yong-css-kai-fa-ji-qiao-66-ge-shi-yong-ji-qiao-zhi-de-shou-cang/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">灵活运用CSS开发技巧(66个实用技巧，值得收藏)</h3>
+      <div class="post-card__meta meta-text">2019-09-09</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/postcss-de-cha-jian/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">postcss的插件</h3>
+      <div class="post-card__meta meta-text">2019-09-09</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/kan-wan-zhe-pian-ni-ye-neng-ba-react-hooks-wan-chu-hua/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">看完这篇，你也能把 React Hooks 玩出花</h3>
+      <div class="post-card__meta meta-text">2019-09-09</div>
+    </div>
+    
+    <img class="post-card__thumb-square" src="/post-images/kan-wan-zhe-pian-ni-ye-neng-ba-react-hooks-wan-chu-hua.jpg" alt="看完这篇，你也能把 React Hooks 玩出花" loading="lazy" />
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/js-ji-ben-he-fei-ji-ben-shu-ju-lei-xing/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">JS 基本和非基本数据类型</h3>
+      <div class="post-card__meta meta-text">2019-09-09</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/js-shu-zu-qu-chong-fu/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">JS 数组去重复</h3>
+      <div class="post-card__meta meta-text">2019-09-09</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/babel-preset-env/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">翻译Babel文档之@babel/preset-env</h3>
+      <div class="post-card__meta meta-text">2019-09-09</div>
+    </div>
+    
+    <img class="post-card__thumb-square" src="/post-images/babel-preset-env.jpg" alt="翻译Babel文档之@babel/preset-env" loading="lazy" />
+    
+  </a>
+</article>
+   </div>
+  </section>
+  
+
+  <div class="content-grid">
+    <div class="main-content">
+      
+      
+      <section class="section-latest">
+        <div class="section-header">
+          <h2 class="section-title">最新文章</h2>
+        </div>
+        <div class="post-list">
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/background-clip/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">background-clip</h3>
+    </a>
+    <a href="/post/background-clip/" class="post-card__excerpt clamp-2">
+      &amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+  ...
+    </a>
+    <div class="post-card__meta meta-text">
+      2019-09-10
+      
+    </div>
+  </div>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/vwandrem-shi-xian-yi-dong-duan-bu-ju/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">vw&amp;rem实现移动端布局</h3>
+    </a>
+    <a href="/post/vwandrem-shi-xian-yi-dong-duan-bu-ju/" class="post-card__excerpt clamp-2">
+      &amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+  &amp;l...
+    </a>
+    <div class="post-card__meta meta-text">
+      2019-09-10
+      
+    </div>
+  </div>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/zheng-ze-huo-qu-url-can-shu/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">正则获取url参数</h3>
+    </a>
+    <a href="/post/zheng-ze-huo-qu-url-can-shu/" class="post-card__excerpt clamp-2">
+      function query(url){
+  let reg=/([^=?&amp;amp;]+)=([^=?&amp;amp;]+)/g,
+  obj={};
+  url.replace(reg,function(){
+    obj[ar...
+    </a>
+    <div class="post-card__meta meta-text">
+      2019-09-10
+      
+    </div>
+  </div>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/css3-19-chong-loadingjia-zai-dong-xiao/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">CSS3 19种LOADING（加载）动效</h3>
+    </a>
+    <a href="/post/css3-19-chong-loadingjia-zai-dong-xiao/" class="post-card__excerpt clamp-2">
+      https://wow.techbrood.com/fiddle/29490
+    </a>
+    <div class="post-card__meta meta-text">
+      2019-09-09
+      
+    </div>
+  </div>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/ling-huo-yun-yong-css-kai-fa-ji-qiao-66-ge-shi-yong-ji-qiao-zhi-de-shou-cang/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">灵活运用CSS开发技巧(66个实用技巧，值得收藏)</h3>
+    </a>
+    <a href="/post/ling-huo-yun-yong-css-kai-fa-ji-qiao-66-ge-shi-yong-ji-qiao-zhi-de-shou-cang/" class="post-card__excerpt clamp-2">
+      灵活运用CSS开发技巧(66个实用技巧，值得收藏)
+    </a>
+    <div class="post-card__meta meta-text">
+      2019-09-09
+      
+    </div>
+  </div>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/postcss-de-cha-jian/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">postcss的插件</h3>
+    </a>
+    <a href="/post/postcss-de-cha-jian/" class="post-card__excerpt clamp-2">
+      postcss-px-to-viewport
+    </a>
+    <div class="post-card__meta meta-text">
+      2019-09-09
+      
+    </div>
+  </div>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/kan-wan-zhe-pian-ni-ye-neng-ba-react-hooks-wan-chu-hua/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">看完这篇，你也能把 React Hooks 玩出花</h3>
+    </a>
+    <a href="/post/kan-wan-zhe-pian-ni-ye-neng-ba-react-hooks-wan-chu-hua/" class="post-card__excerpt clamp-2">
+      https://juejin.im/post/5d754dbde51d4561cd2466bf
+    </a>
+    <div class="post-card__meta meta-text">
+      2019-09-09
+      
+    </div>
+  </div>
+  
+  <a href="/post/kan-wan-zhe-pian-ni-ye-neng-ba-react-hooks-wan-chu-hua/" class="post-card__thumb-link">
+    <img class="post-card__thumb" src="/post-images/kan-wan-zhe-pian-ni-ye-neng-ba-react-hooks-wan-chu-hua.jpg" alt="看完这篇，你也能把 React Hooks 玩出花" loading="lazy" />
+  </a>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/js-ji-ben-he-fei-ji-ben-shu-ju-lei-xing/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">JS 基本和非基本数据类型</h3>
+    </a>
+    <a href="/post/js-ji-ben-he-fei-ji-ben-shu-ju-lei-xing/" class="post-card__excerpt clamp-2">
+      目前JS中有6种基本数据类型: Undefined、Null、Boolean、Number、Symbol 和 String。还有1种复杂的数据类型————Object，Object本质上是由一组无序的名值对组成的。Object、Arr...
+    </a>
+    <div class="post-card__meta meta-text">
+      2019-09-09
+      
+    </div>
+  </div>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/js-shu-zu-qu-chong-fu/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">JS 数组去重复</h3>
+    </a>
+    <a href="/post/js-shu-zu-qu-chong-fu/" class="post-card__excerpt clamp-2">
+      使用 set
+
+function uniquearray(array) { 
+    let unique_array= Array.from(set(array)) 
+		return unique_array; 
+}
+
+
+...
+    </a>
+    <div class="post-card__meta meta-text">
+      2019-09-09
+      
+    </div>
+  </div>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/babel-preset-env/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">翻译Babel文档之@babel/preset-env</h3>
+    </a>
+    <a href="/post/babel-preset-env/" class="post-card__excerpt clamp-2">
+      https://juejin.im/post/5d74d4376fb9a06ad16f9644
+    </a>
+    <div class="post-card__meta meta-text">
+      2019-09-09
+      
+    </div>
+  </div>
+  
+  <a href="/post/babel-preset-env/" class="post-card__thumb-link">
+    <img class="post-card__thumb" src="/post-images/babel-preset-env.jpg" alt="翻译Babel文档之@babel/preset-env" loading="lazy" />
+  </a>
+  
+</article>
+
+          
+        </div>
+      </section>
+      
+
+      
+      
+      <div class="view-more">
+        <a href="/post/page/2/" class="btn btn--secondary">查看更多文章 &rarr;</a>
+      </div>
+      
+    </div>
+
+    
+    
+    <aside class="sidebar">
+      <div class="sidebar__section sidebar__about">
+        
+        <img class="sidebar__avatar" src="/images/avatar.png" alt="松的Blog" />
+        
+        <h3 class="sidebar__title">松的Blog</h3>
+        
+        <p class="sidebar__desc">Welcome my friend</p>
+        
+        
+      </div>
+
+      
+      <div class="sidebar__section">
+        <h4 class="sidebar__section-title meta-text">标签</h4>
+        <div class="sidebar__tags">
+          
+          <a href="/tag/gridea-pro/" class="tag-pill">Gridea Pro</a>
+          
+          <a href="/tag/konva/" class="tag-pill">konva</a>
+          
+          <a href="/tag/tong-xin/" class="tag-pill">通信</a>
+          
+          <a href="/tag/storage/" class="tag-pill">storage</a>
+          
+          <a href="/tag/git/" class="tag-pill">Git</a>
+          
+          <a href="/tag/nitro/" class="tag-pill">Nitro</a>
+          
+          <a href="/tag/huan-cun/" class="tag-pill">缓存</a>
+          
+          <a href="/tag/mvp/" class="tag-pill">mvp</a>
+          
+          <a href="/tag/navigator/" class="tag-pill">navigator</a>
+          
+          <a href="/tag/redis/" class="tag-pill">redis</a>
+          
+          <a href="/tag/seo/" class="tag-pill">SEO</a>
+          
+          <a href="/tag/skills/" class="tag-pill">skills</a>
+          
+          <a href="/tag/转载/" class="tag-pill">转载</a>
+          
+          <a href="/tag/pdf/" class="tag-pill">pdf</a>
+          
+          <a href="/tag/导航/" class="tag-pill">导航</a>
+          
+          <a href="/tag/Vue/" class="tag-pill">Vue</a>
+          
+          <a href="/tag/ECMAScript/" class="tag-pill">ECMAScript</a>
+          
+          <a href="/tag/表格合并/" class="tag-pill">表格合并</a>
+          
+          <a href="/tag/权限组件/" class="tag-pill">权限组件</a>
+          
+          <a href="/tag/注释/" class="tag-pill">注释</a>
+          
+          <a href="/tag/表单/" class="tag-pill">表单</a>
+          
+          <a href="/tag/Webpack/" class="tag-pill">Webpack</a>
+          
+          <a href="/tag/微信开发/" class="tag-pill">微信开发</a>
+          
+          <a href="/tag/支付/" class="tag-pill">支付</a>
+          
+          <a href="/tag/PDF 工具/" class="tag-pill">PDF 工具</a>
+          
+          <a href="/tag/JS/" class="tag-pill">JS</a>
+          
+          <a href="/tag/tree-data/" class="tag-pill">tree-data</a>
+          
+          <a href="/tag/vue-router/" class="tag-pill">vue-router</a>
+          
+          <a href="/tag/file-saver/" class="tag-pill">file-saver</a>
+          
+          <a href="/tag/Express/" class="tag-pill">Express</a>
+          
+          <a href="/tag/水印/" class="tag-pill">水印</a>
+          
+          <a href="/tag/editor/" class="tag-pill">editor</a>
+          
+          <a href="/tag/js utils/" class="tag-pill">js utils</a>
+          
+          <a href="/tag/BOM/" class="tag-pill">BOM</a>
+          
+          <a href="/tag/CSS/" class="tag-pill">CSS</a>
+          
+          <a href="/tag/MongoDB/" class="tag-pill">MongoDB</a>
+          
+          <a href="/tag/Node/" class="tag-pill">Node</a>
+          
+          <a href="/tag/tree/" class="tag-pill">tree</a>
+          
+          <a href="/tag/Babel/" class="tag-pill">Babel</a>
+          
+          <a href="/tag/scss/" class="tag-pill">scss</a>
+          
+          <a href="/tag/面试/" class="tag-pill">面试</a>
+          
+          <a href="/tag/骨架屏/" class="tag-pill">骨架屏</a>
+          
+          <a href="/tag/linux/" class="tag-pill">linux</a>
+          
+          <a href="/tag/React/" class="tag-pill">React</a>
+          
+          <a href="/tag/video/" class="tag-pill">video</a>
+          
+          <a href="/tag/BFF/" class="tag-pill">BFF</a>
+          
+          <a href="/tag/jszip/" class="tag-pill">jszip</a>
+          
+          <a href="/tag/css 特效/" class="tag-pill">css 特效</a>
+          
+          <a href="/tag/富文本/" class="tag-pill">富文本</a>
+          
+          <a href="/tag/canvas/" class="tag-pill">canvas</a>
+          
+          <a href="/tag/CSS3/" class="tag-pill">CSS3</a>
+          
+          <a href="/tag/Vue cli 配置/" class="tag-pill">Vue cli 配置</a>
+          
+          <a href="/tag/递归/" class="tag-pill">递归</a>
+          
+          <a href="/tag/axios/" class="tag-pill">axios</a>
+          
+          <a href="/tag/小程序/" class="tag-pill">小程序</a>
+          
+          <a href="/tag/uniapp/" class="tag-pill">uniapp</a>
+          
+          <a href="/tag/正则/" class="tag-pill">正则</a>
+          
+          <a href="/tag/DOM/" class="tag-pill">DOM</a>
+          
+          <a href="/tag/Date/" class="tag-pill">Date</a>
+          
+        </div>
+      </div>
+      
+    </aside>
+    
+  </div>
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+  <div class="footer-inner">
+
+    
+    
+    <nav class="footer-nav" aria-label="页脚导航">
+      
+      <a class="footer-nav__link" href="/">首页</a>
+      
+      <a class="footer-nav__link" href="/post">博客</a>
+      
+      <a class="footer-nav__link" href="/memos">闪念</a>
+      
+      <a class="footer-nav__link" href="/archives">归档</a>
+      
+      <a class="footer-nav__link" href="/tags">标签</a>
+      
+      <a class="footer-nav__link" href="/links">友链</a>
+      
+      <a class="footer-nav__link" href="/post/about">关于</a>
+      
+    </nav>
+    
+
+    
+    <div class="footer-social">
+      
+      
+      
+      <a class="footer-social__link" href="/feed.xml" aria-label="RSS">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6.18 15.64a2.18 2.18 0 110 4.36 2.18 2.18 0 010-4.36zM4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44zm0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/>
+        </svg>
+      </a>
+    </div>
+
+    
+    <div class="footer-copyright">
+      <p>&copy; 2026 松的Blog. All rights reserved.</p>
+    </div>
+
+    
+    
+    <div class="footer-custom">
+      Powered by Gridea Pro
+    </div>
+    
+
+    
+    <div class="footer-powered">
+      <span>Powered by <a href="https://gridea.pro" target="_blank" rel="noopener noreferrer">Gridea Pro</a></span>
+    </div>
+
+  </div>
+</footer>
+
+  
+  <div class="search-overlay" id="searchOverlay" style="display:none;">
+  <div class="search-modal">
+    <div class="search-header">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="搜索文章..." autocomplete="off" />
+      <span class="search-kbd">&#8984;K</span>
+      <button class="search-close" id="searchClose" type="button" aria-label="关闭搜索">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<script src="/scripts/search.js"></script>
+  
+
+  
+
+  
+
+  
+
+<script>console.log("\n%c ✦ Gridea Pro v1.1.1 %c · Theme: flavor-theme v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+</html>
