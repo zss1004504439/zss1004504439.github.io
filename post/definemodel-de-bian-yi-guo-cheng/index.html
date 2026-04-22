@@ -27,26 +27,26 @@
 
 
   <meta name="generator" content="Gridea Pro 1.1.1">
-  <title>vue cli &amp; create-react-app 打包编译时间 buildTime | 松的Blog</title>
+  <title>defineModel 的编译过程 | 松的Blog</title>
   
-<meta property="og:title" content="vue cli &amp; create-react-app 打包编译时间 buildTime" />
+<meta property="og:title" content="defineModel 的编译过程" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="&amp;lt;html lang=&amp;quot;zh-CN&amp;quot; buildTime=&amp;quot;&amp;lt;%= (new Date()).toLocaleString() %&amp;gt;&amp;quot;&amp;gt;">
-<link rel="canonical" href="https://zss1004504439.github.io/post/vue-cli-and-create-react-app-da-bao-bian-yi-shi-jian-buildtime/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"vue cli \u0026 create-react-app 打包编译时间 buildTime","url":"https://zss1004504439.github.io/post/vue-cli-and-create-react-app-da-bao-bian-yi-shi-jian-buildtime/","description":"\u0026lt;html lang=\u0026quot;zh-CN\u0026quot; buildTime=\u0026quot;\u0026lt;%= (new Date()).toLocaleString() %\u0026gt;\u0026quot;\u0026gt;","datePublished":"2020-08-20T08:42:45+08:00","dateModified":"2026-04-17T11:19:42+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/vue-cli-and-create-react-app-da-bao-bian-yi-shi-jian-buildtime/","name":"vue cli \u0026 create-react-app 打包编译时间 buildTime","position":2}]}</script>
-<meta property="og:title" content="vue cli &amp; create-react-app 打包编译时间 buildTime">
-<meta property="og:description" content="&amp;lt;html lang=&amp;quot;zh-CN&amp;quot; buildTime=&amp;quot;&amp;lt;%= (new Date()).toLocaleString() %&amp;gt;&amp;quot;&amp;gt;">
-<meta property="og:url" content="https://zss1004504439.github.io/post/vue-cli-and-create-react-app-da-bao-bian-yi-shi-jian-buildtime/">
+<meta name="description" content="// defineModel 编译前（我们写的代码） const model = defineModel({ type: Number, required: true }) // 编译后（编译器自动生成的代码） const props = defineProps({ modelValue: { type: Number, required: true } }) const e...">
+<link rel="canonical" href="https://zss1004504439.github.io/post/definemodel-de-bian-yi-guo-cheng/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"defineModel 的编译过程","url":"https://zss1004504439.github.io/post/definemodel-de-bian-yi-guo-cheng/","description":"// defineModel 编译前（我们写的代码） const model = defineModel({ type: Number, required: true }) // 编译后（编译器自动生成的代码） const props = defineProps({ modelValue: { type: Number, required: true } }) const e...","datePublished":"2026-04-22T14:47:00+08:00","dateModified":"2026-04-22T14:47:00+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/definemodel-de-bian-yi-guo-cheng/","name":"defineModel 的编译过程","position":2}]}</script>
+<meta property="og:title" content="defineModel 的编译过程">
+<meta property="og:description" content="// defineModel 编译前（我们写的代码） const model = defineModel({ type: Number, required: true }) // 编译后（编译器自动生成的代码） const props = defineProps({ modelValue: { type: Number, required: true } }) const e...">
+<meta property="og:url" content="https://zss1004504439.github.io/post/definemodel-de-bian-yi-guo-cheng/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="松的Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://zss1004504439.github.io/post/vue-cli-and-create-react-app-da-bao-bian-yi-shi-jian-buildtime/">
-<meta name="twitter:title" content="vue cli &amp; create-react-app 打包编译时间 buildTime">
-<meta name="twitter:description" content="&amp;lt;html lang=&amp;quot;zh-CN&amp;quot; buildTime=&amp;quot;&amp;lt;%= (new Date()).toLocaleString() %&amp;gt;&amp;quot;&amp;gt;">
+<meta name="twitter:url" content="https://zss1004504439.github.io/post/definemodel-de-bian-yi-guo-cheng/">
+<meta name="twitter:title" content="defineModel 的编译过程">
+<meta name="twitter:description" content="// defineModel 编译前（我们写的代码） const model = defineModel({ type: Number, required: true }) // 编译后（编译器自动生成的代码） const props = defineProps({ modelValue: { type: Number, required: true } }) const e...">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -133,13 +133,19 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">vue cli &amp; create-react-app 打包编译时间 buildTime</h1>
+    <h1 class="article-title">defineModel 的编译过程</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2020-08-20</span>
+      <span class="article-meta__item">2026-04-22</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
+      
+    </div>
+    
+    <div class="article-header__tags">
+      
+      <a href="/tag/vue3/" class="tag-pill tag-pill--sm">vue3</a>
       
     </div>
     
@@ -148,7 +154,52 @@
   
 
   <div class="article-content">
-    <pre><code class="language-html">&lt;html lang=&quot;zh-CN&quot; buildTime=&quot;&lt;%= (new Date()).toLocaleString() %&gt;&quot;&gt;
+    <pre><code>// defineModel 编译前（我们写的代码）
+const model = defineModel({ type: Number, required: true })
+
+// 编译后（编译器自动生成的代码）
+const props = defineProps({ modelValue: { type: Number, required: true } })
+const emit = defineEmits(['update:modelValue'])
+
+// 生成一个 ref 对象，关联 props.modelValue 和 emit
+const model = computed({
+  get: () =&gt; props.modelValue, // 读取父组件传递的 props（数据父→子）
+  set: (newVal) =&gt; emit('update:modelValue', newVal) // 修改时触发 emit，通知父组件更新
+})
+
+</code></pre>
+<h2 id="heading">双向绑定</h2>
+<pre><code>&lt;!-- 父组件 --&gt;
+&lt;template&gt;
+  &lt;div&gt;父组件 count: {{ count }}&lt;/div&gt;
+  &lt;Child v-model=&quot;count&quot; /&gt;
+&lt;/template&gt;
+
+&lt;script setup lang=&quot;ts&quot;&gt;
+import { ref } from 'vue'
+import Child from './Child.vue'
+
+const count = ref(0)
+// 父组件可主动修改数据，子组件仅能通过 emit 通知修改
+const resetCount = () =&gt; {
+  count.value = 0
+}
+&lt;/script&gt;
+
+&lt;!-- 子组件 --&gt;
+&lt;script setup lang=&quot;ts&quot;&gt;
+// 显式指定类型，TS 自动校验 props 规则
+const model = defineModel&lt;number&gt;({
+  required: true,
+  validator: (val) =&gt; val &gt;= 0 // 子组件可对 props 进行校验，无法修改
+})
+
+// 子组件只能通过修改 model.value 触发 emit，无法直接修改父组件 count
+const increment = () =&gt; {
+  model.value++ // 触发 emit('update:modelValue', model.value + 1)
+}
+&lt;/script&gt;
+
 </code></pre>
 
   </div>
@@ -156,20 +207,20 @@
   
   <nav class="post-nav">
     
-    <a href="/post/treedata-2-flatdata/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">treeData 2 flatData</span>
+        <span class="post-nav-card__title">Nitro 缓存 maxAge 和 staleMaxAge 区别</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/da-bao-bian-yi-shi-jian-buildtime/" class="post-nav-card post-nav-card--next">
+    <a href="/post/js-paoxuan-ran-tingxuan-ran-paojs-ting-/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">打包编译时间 buildTime</span>
+        <span class="post-nav-card__title">JS 跑，渲染停；渲染跑，JS 停。</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

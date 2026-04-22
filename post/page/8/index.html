@@ -139,14 +139,18 @@
     
     <article class="post-card post-card--list">
   <div class="post-card__body">
-    <a href="/post/da-bao-bian-yi-shi-jian-buildtime/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">打包编译时间 buildTime</h3>
+    <a href="/post/treedata-2-flatdata/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">treeData 2 flatData</h3>
     </a>
-    <a href="/post/da-bao-bian-yi-shi-jian-buildtime/" class="post-card__excerpt clamp-2">
-      &amp;lt;html lang=&amp;quot;zh-CN&amp;quot; buildTime=&amp;quot;&amp;lt;%= (new Date()).toLocaleString() %&amp;gt;&amp;quot;&amp;gt;
+    <a href="/post/treedata-2-flatdata/" class="post-card__excerpt clamp-2">
+      let res = []        // 用于存储递归结果（扁平数据）
+// 递归函数
+const fn = (source)=&amp;gt;{
+    source.forEach(el=&amp;gt;{
+        res.p...
     </a>
     <div class="post-card__meta meta-text">
-      2020-08-20
+      2020-08-26
       
     </div>
   </div>
@@ -160,6 +164,23 @@
       <h3 class="post-card__title clamp-3">vue cli &amp; create-react-app 打包编译时间 buildTime</h3>
     </a>
     <a href="/post/vue-cli-and-create-react-app-da-bao-bian-yi-shi-jian-buildtime/" class="post-card__excerpt clamp-2">
+      &amp;lt;html lang=&amp;quot;zh-CN&amp;quot; buildTime=&amp;quot;&amp;lt;%= (new Date()).toLocaleString() %&amp;gt;&amp;quot;&amp;gt;
+    </a>
+    <div class="post-card__meta meta-text">
+      2020-08-20
+      
+    </div>
+  </div>
+  
+</article>
+
+    
+    <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/da-bao-bian-yi-shi-jian-buildtime/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">打包编译时间 buildTime</h3>
+    </a>
+    <a href="/post/da-bao-bian-yi-shi-jian-buildtime/" class="post-card__excerpt clamp-2">
       &amp;lt;html lang=&amp;quot;zh-CN&amp;quot; buildTime=&amp;quot;&amp;lt;%= (new Date()).toLocaleString() %&amp;gt;&amp;quot;&amp;gt;
     </a>
     <div class="post-card__meta meta-text">
@@ -300,26 +321,6 @@ export defa...
     </a>
     <div class="post-card__meta meta-text">
       2020-07-28
-      
-    </div>
-  </div>
-  
-</article>
-
-    
-    <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/url-can-shu-xu-lie-hua-fan-xu-lie-hua/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">url参数 序列化 反序列化</h3>
-    </a>
-    <a href="/post/url-can-shu-xu-lie-hua-fan-xu-lie-hua/" class="post-card__excerpt clamp-2">
-      url参数反序列化
-一般会通过location.search拿到路由传递的参数，并进行反序列化得到对象
-function parseUrlSearch() {
-  const search = &#39;?age=25&amp;amp;name=T...
-    </a>
-    <div class="post-card__meta meta-text">
-      2020-07-21
       
     </div>
   </div>
