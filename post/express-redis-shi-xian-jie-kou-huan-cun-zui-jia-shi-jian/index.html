@@ -11,8 +11,8 @@
 
 
 <meta name="description" content="Welcome my friend">
-<meta property="og:site_name" content="松的Blog">
-<meta property="og:title" content="松的Blog">
+<meta property="og:site_name" content="松">
+<meta property="og:title" content="松">
 <meta property="og:description" content="Welcome my friend">
 
 <meta property="og:image" content="/images/avatar.png">
@@ -20,14 +20,14 @@
 <meta property="og:url" content="https://zss1004504439.github.io">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="松的Blog">
+<meta name="twitter:title" content="松">
 <meta name="twitter:description" content="Welcome my friend">
 
 <meta name="twitter:image" content="/images/avatar.png">
 
 
   <meta name="generator" content="Gridea Pro 1.1.1">
-  <title>express + redis 实现接口缓存最佳实践 | 松的Blog</title>
+  <title>express + redis 实现接口缓存最佳实践 | 松</title>
   
 <meta property="og:title" content="express + redis 实现接口缓存最佳实践" />
 <meta property="og:type" content="article" />
@@ -36,13 +36,13 @@
 <meta name="description" content="在 Node.js 环境下，使用 Express 配合 Redis 进行接口缓存是提升系统性能、降低数据库压力的经典方案。 以下是实现这一机制的最佳实践指南。 1. 核心架构逻辑 接口缓存的基本逻辑是 “命中即返回，不中即查询并存入”。 客户端请求：进入中间件。 查询 Redis：检查是否存&amp;hellip;">
 <meta name="keywords" content="vue,nuxt3,nodejs">
 <link rel="canonical" href="https://zss1004504439.github.io/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"express + redis 实现接口缓存最佳实践","url":"https://zss1004504439.github.io/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/","description":"在 Node.js 环境下，使用 Express 配合 Redis 进行接口缓存是提升系统性能、降低数据库压力的经典方案。 以下是实现这一机制的最佳实践指南。 1. 核心架构逻辑 接口缓存的基本逻辑是 “命中即返回，不中即查询并存入”。 客户端请求：进入中间件。 查询 Redis：检查是否存\u0026hellip;","datePublished":"2025-03-05T14:23:31+08:00","dateModified":"2025-03-05T14:23:31+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/","name":"express + redis 实现接口缓存最佳实践","position":2}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"express + redis 实现接口缓存最佳实践","url":"https://zss1004504439.github.io/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/","description":"在 Node.js 环境下，使用 Express 配合 Redis 进行接口缓存是提升系统性能、降低数据库压力的经典方案。 以下是实现这一机制的最佳实践指南。 1. 核心架构逻辑 接口缓存的基本逻辑是 “命中即返回，不中即查询并存入”。 客户端请求：进入中间件。 查询 Redis：检查是否存\u0026hellip;","datePublished":"2025-03-05T14:23:31+08:00","dateModified":"2025-03-05T14:23:31+08:00","author":{"@type":"Person","name":"松"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/","name":"express + redis 实现接口缓存最佳实践","position":2}]}</script>
 <meta property="og:title" content="express + redis 实现接口缓存最佳实践">
 <meta property="og:description" content="在 Node.js 环境下，使用 Express 配合 Redis 进行接口缓存是提升系统性能、降低数据库压力的经典方案。 以下是实现这一机制的最佳实践指南。 1. 核心架构逻辑 接口缓存的基本逻辑是 “命中即返回，不中即查询并存入”。 客户端请求：进入中间件。 查询 Redis：检查是否存&amp;hellip;">
 <meta property="og:url" content="https://zss1004504439.github.io/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="松的Blog">
+<meta property="og:site_name" content="松">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://zss1004504439.github.io/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/">
@@ -60,10 +60,10 @@
       <div class="top-bar__left">
         
         <a href="https://zss1004504439.github.io" class="site-avatar-link" aria-label="返回首页">
-          <img class="site-avatar" src="/images/avatar.png" alt="松的Blog" />
+          <img class="site-avatar" src="/images/avatar.png" alt="松" />
         </a>
         
-        <a href="https://zss1004504439.github.io" class="site-name-link">松的Blog</a>
+        <a href="https://zss1004504439.github.io" class="site-name-link">松</a>
       </div>
 
       
@@ -327,7 +327,7 @@ app.get('/api/news', cacheMiddleware(60), async (req, res) =&gt; {
 
     
     <div class="footer-copyright">
-      <p>&copy; 2026 松的Blog. All rights reserved.</p>
+      <p>&copy; 2026 松. All rights reserved.</p>
     </div>
 
     

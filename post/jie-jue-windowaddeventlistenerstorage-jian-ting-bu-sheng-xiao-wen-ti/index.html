@@ -11,8 +11,8 @@
 
 
 <meta name="description" content="Welcome my friend">
-<meta property="og:site_name" content="松的Blog">
-<meta property="og:title" content="松的Blog">
+<meta property="og:site_name" content="松">
+<meta property="og:title" content="松">
 <meta property="og:description" content="Welcome my friend">
 
 <meta property="og:image" content="/images/avatar.png">
@@ -20,14 +20,14 @@
 <meta property="og:url" content="https://zss1004504439.github.io">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="松的Blog">
+<meta name="twitter:title" content="松">
 <meta name="twitter:description" content="Welcome my friend">
 
 <meta name="twitter:image" content="/images/avatar.png">
 
 
   <meta name="generator" content="Gridea Pro 1.1.1">
-  <title>解决 window.addEventListener(&#39;storage&#39;) 监听不生效问题 | 松的Blog</title>
+  <title>解决 window.addEventListener(&#39;storage&#39;) 监听不生效问题 | 松</title>
   
 <meta property="og:title" content="解决 window.addEventListener(&#39;storage&#39;) 监听不生效问题" />
 <meta property="og:type" content="article" />
@@ -36,13 +36,13 @@
 <meta name="description" content="解决 window.addEventListener(&amp;lsquo;storage&amp;rsquo;) 监听不生效问题 很多前端同学在使用 window.addEventListener('storage') 监听本地存储变化时，都会遇到监听不触发、完全没反应的问题，这篇文章用最简单的话讲清原因和解决方案。 一、核心真相（必看） storage 事件天生就不会在当前窗口触发！ 只&amp;hellip;">
 <meta name="keywords" content="vue,nuxt3,nodejs">
 <link rel="canonical" href="https://zss1004504439.github.io/post/jie-jue-windowaddeventlistenerstorage-jian-ting-bu-sheng-xiao-wen-ti/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"解决 window.addEventListener('storage') 监听不生效问题","url":"https://zss1004504439.github.io/post/jie-jue-windowaddeventlistenerstorage-jian-ting-bu-sheng-xiao-wen-ti/","description":"解决 window.addEventListener(\u0026lsquo;storage\u0026rsquo;) 监听不生效问题 很多前端同学在使用 window.addEventListener('storage') 监听本地存储变化时，都会遇到监听不触发、完全没反应的问题，这篇文章用最简单的话讲清原因和解决方案。 一、核心真相（必看） storage 事件天生就不会在当前窗口触发！ 只\u0026hellip;","datePublished":"2022-02-17T10:11:03+08:00","dateModified":"2026-04-17T13:48:26+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/jie-jue-windowaddeventlistenerstorage-jian-ting-bu-sheng-xiao-wen-ti/","name":"解决 window.addEventListener('storage') 监听不生效问题","position":2}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"解决 window.addEventListener('storage') 监听不生效问题","url":"https://zss1004504439.github.io/post/jie-jue-windowaddeventlistenerstorage-jian-ting-bu-sheng-xiao-wen-ti/","description":"解决 window.addEventListener(\u0026lsquo;storage\u0026rsquo;) 监听不生效问题 很多前端同学在使用 window.addEventListener('storage') 监听本地存储变化时，都会遇到监听不触发、完全没反应的问题，这篇文章用最简单的话讲清原因和解决方案。 一、核心真相（必看） storage 事件天生就不会在当前窗口触发！ 只\u0026hellip;","datePublished":"2022-02-17T10:11:03+08:00","dateModified":"2026-04-17T13:48:26+08:00","author":{"@type":"Person","name":"松"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/jie-jue-windowaddeventlistenerstorage-jian-ting-bu-sheng-xiao-wen-ti/","name":"解决 window.addEventListener('storage') 监听不生效问题","position":2}]}</script>
 <meta property="og:title" content="解决 window.addEventListener('storage') 监听不生效问题">
 <meta property="og:description" content="解决 window.addEventListener(&amp;lsquo;storage&amp;rsquo;) 监听不生效问题 很多前端同学在使用 window.addEventListener('storage') 监听本地存储变化时，都会遇到监听不触发、完全没反应的问题，这篇文章用最简单的话讲清原因和解决方案。 一、核心真相（必看） storage 事件天生就不会在当前窗口触发！ 只&amp;hellip;">
 <meta property="og:url" content="https://zss1004504439.github.io/post/jie-jue-windowaddeventlistenerstorage-jian-ting-bu-sheng-xiao-wen-ti/">
 <meta property="og:type" content="article">
-<meta property="og:site_name" content="松的Blog">
+<meta property="og:site_name" content="松">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://zss1004504439.github.io/post/jie-jue-windowaddeventlistenerstorage-jian-ting-bu-sheng-xiao-wen-ti/">
@@ -60,10 +60,10 @@
       <div class="top-bar__left">
         
         <a href="https://zss1004504439.github.io" class="site-avatar-link" aria-label="返回首页">
-          <img class="site-avatar" src="/images/avatar.png" alt="松的Blog" />
+          <img class="site-avatar" src="/images/avatar.png" alt="松" />
         </a>
         
-        <a href="https://zss1004504439.github.io" class="site-name-link">松的Blog</a>
+        <a href="https://zss1004504439.github.io" class="site-name-link">松</a>
       </div>
 
       
@@ -301,7 +301,7 @@ setMyStorage('name', '测试');
 
     
     <div class="footer-copyright">
-      <p>&copy; 2026 松的Blog. All rights reserved.</p>
+      <p>&copy; 2026 松. All rights reserved.</p>
     </div>
 
     
