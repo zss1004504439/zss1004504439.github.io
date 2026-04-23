@@ -34,6 +34,7 @@
 
 
 <meta name="description" content="在 Node.js 环境下，使用 Express 配合 Redis 进行接口缓存是提升系统性能、降低数据库压力的经典方案。 以下是实现这一机制的最佳实践指南。 1. 核心架构逻辑 接口缓存的基本逻辑是 “命中即返回，不中即查询并存入”。 客户端请求：进入中间件。 查询 Redis：检查是否存&amp;hellip;">
+<meta name="keywords" content="vue,nuxt3,nodejs">
 <link rel="canonical" href="https://zss1004504439.github.io/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"express + redis 实现接口缓存最佳实践","url":"https://zss1004504439.github.io/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/","description":"在 Node.js 环境下，使用 Express 配合 Redis 进行接口缓存是提升系统性能、降低数据库压力的经典方案。 以下是实现这一机制的最佳实践指南。 1. 核心架构逻辑 接口缓存的基本逻辑是 “命中即返回，不中即查询并存入”。 客户端请求：进入中间件。 查询 Redis：检查是否存\u0026hellip;","datePublished":"2025-03-05T14:23:31+08:00","dateModified":"2025-03-05T14:23:31+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/","name":"express + redis 实现接口缓存最佳实践","position":2}]}</script>

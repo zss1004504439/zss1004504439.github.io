@@ -34,6 +34,7 @@
 
 
 <meta name="description" content="在 Vue 3 中结合动态路由（/course/:id）和 Pinia 设计 Store 时，核心挑战在于确保 Store 的状态与当前路由参数同步，尤其是在同一个组件实例被复用（即从 /course/1 跳转到 /course/2）时。 以下是三种推荐的设计方案： 1. 组合式设计（推荐）：以 ID 为核心的响应式 Store 这种方式最符&amp;hellip;">
+<meta name="keywords" content="vue,nuxt3,nodejs">
 <link rel="canonical" href="https://zss1004504439.github.io/post/vue-3-dong-tai-lu-you-pinia-zhuang-tai-tong-bu-cai-keng/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Vue 3 动态路由 Pinia 状态同步踩坑","url":"https://zss1004504439.github.io/post/vue-3-dong-tai-lu-you-pinia-zhuang-tai-tong-bu-cai-keng/","description":"在 Vue 3 中结合动态路由（/course/:id）和 Pinia 设计 Store 时，核心挑战在于确保 Store 的状态与当前路由参数同步，尤其是在同一个组件实例被复用（即从 /course/1 跳转到 /course/2）时。 以下是三种推荐的设计方案： 1. 组合式设计（推荐）：以 ID 为核心的响应式 Store 这种方式最符\u0026hellip;","datePublished":"2025-04-23T18:41:23+08:00","dateModified":"2025-04-23T18:51:57+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/vue-3-dong-tai-lu-you-pinia-zhuang-tai-tong-bu-cai-keng/","name":"Vue 3 动态路由 Pinia 状态同步踩坑","position":2}]}</script>

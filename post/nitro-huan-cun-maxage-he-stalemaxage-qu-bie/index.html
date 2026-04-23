@@ -34,6 +34,7 @@
 
 
 <meta name="description" content="简单理解： maxAge：缓存正经“保质期”。 这段时间内，数据直接用，不用重新计算/请求，干净又新鲜。 staleMaxAge：过期“宽限期”。 过了 maxAge 但还在 staleMaxAge 里，先给你旧数据用着，后台悄悄去更新，不卡请求、不报错。 一句话总结： **maxAge 管新鲜多久，staleMaxAge 管过期了还能先用多久。&amp;hellip;">
+<meta name="keywords" content="vue,nuxt3,nodejs">
 <link rel="canonical" href="https://zss1004504439.github.io/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Nitro 缓存 maxAge 和 staleMaxAge 区别","url":"https://zss1004504439.github.io/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/","description":"简单理解： maxAge：缓存正经“保质期”。 这段时间内，数据直接用，不用重新计算/请求，干净又新鲜。 staleMaxAge：过期“宽限期”。 过了 maxAge 但还在 staleMaxAge 里，先给你旧数据用着，后台悄悄去更新，不卡请求、不报错。 一句话总结： **maxAge 管新鲜多久，staleMaxAge 管过期了还能先用多久。\u0026hellip;","datePublished":"2024-11-06T13:57:34+08:00","dateModified":"2026-04-17T14:00:54+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/","name":"Nitro 缓存 maxAge 和 staleMaxAge 区别","position":2}]}</script>
