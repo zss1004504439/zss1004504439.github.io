@@ -141,6 +141,36 @@
     <div class="compact-grid">
       
        <article class="post-card post-card--compact">
+  <a href="/post/tinymcevue/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">tinymce.vue</h3>
+      <div class="post-card__meta meta-text">2020-11-09</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/tinymceeditorvue/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">tinymceEditor.vue</h3>
+      <div class="post-card__meta meta-text">2020-11-08</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
+  <a href="/post/wei-lei-nth-child/" class="post-card__inner">
+    <div class="post-card__body">
+      <h3 class="post-card__title clamp-2">伪类 :nth-child</h3>
+      <div class="post-card__meta meta-text">2020-10-26</div>
+    </div>
+    
+  </a>
+</article>
+  
+       <article class="post-card post-card--compact">
   <a href="/post/resetrouter/" class="post-card__inner">
     <div class="post-card__body">
       <h3 class="post-card__title clamp-2">resetRouter</h3>
@@ -209,36 +239,6 @@
     
   </a>
 </article>
-  
-       <article class="post-card post-card--compact">
-  <a href="/post/quan-xian-zu-jian-authority/" class="post-card__inner">
-    <div class="post-card__body">
-      <h3 class="post-card__title clamp-2">权限组件 authority</h3>
-      <div class="post-card__meta meta-text">2020-10-09</div>
-    </div>
-    
-  </a>
-</article>
-  
-       <article class="post-card post-card--compact">
-  <a href="/post/yi-mu-liao-ran-de-zhu-shi/" class="post-card__inner">
-    <div class="post-card__body">
-      <h3 class="post-card__title clamp-2">一目了然的注释</h3>
-      <div class="post-card__meta meta-text">2020-09-29</div>
-    </div>
-    
-  </a>
-</article>
-  
-       <article class="post-card post-card--compact">
-  <a href="/post/vue-router-kong-zhi-lu-you-quan-xian/" class="post-card__inner">
-    <div class="post-card__body">
-      <h3 class="post-card__title clamp-2">vue-router 控制路由权限</h3>
-      <div class="post-card__meta meta-text">2020-09-24</div>
-    </div>
-    
-  </a>
-</article>
    </div>
   </section>
   
@@ -252,6 +252,65 @@
           <h2 class="section-title">最新文章</h2>
         </div>
         <div class="post-list">
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/tinymcevue/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">tinymce.vue</h3>
+    </a>
+    <a href="/post/tinymcevue/" class="post-card__excerpt clamp-2">
+      &amp;lt;template&amp;gt;
+  &amp;lt;div class=&amp;quot;tinymce-editor&amp;quot;&amp;gt;
+    &amp;lt;Editor
+      v-model=&amp;quot;myValue&amp;quot;
+...
+    </a>
+    <div class="post-card__meta meta-text">
+      2020-11-09
+      
+    </div>
+  </div>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/tinymceeditorvue/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">tinymceEditor.vue</h3>
+    </a>
+    <a href="/post/tinymceeditorvue/" class="post-card__excerpt clamp-2">
+      &amp;lt;template&amp;gt;
+  &amp;lt;div style=&amp;quot;width:100%&amp;quot;&amp;gt;
+    &amp;lt;editor v-model=&amp;quot;myValue&amp;quot; :init=&amp;quot;...
+    </a>
+    <div class="post-card__meta meta-text">
+      2020-11-08
+      
+    </div>
+  </div>
+  
+</article>
+
+          
+          <article class="post-card post-card--list">
+  <div class="post-card__body">
+    <a href="/post/wei-lei-nth-child/" class="post-card__title-link">
+      <h3 class="post-card__title clamp-3">伪类 :nth-child</h3>
+    </a>
+    <a href="/post/wei-lei-nth-child/" class="post-card__excerpt clamp-2">
+      选中前5个 ------------------------------ :nth-child(-n+5)
+选中第5个元素开始的后面的孩子 ----------- :nth-child(n+5)
+选中第 5-10 个孩子 ----...
+    </a>
+    <div class="post-card__meta meta-text">
+      2020-10-26
+      
+    </div>
+  </div>
+  
+</article>
+
           
           <article class="post-card post-card--list">
   <div class="post-card__body">
@@ -393,63 +452,6 @@ const getFile = (url) =&amp;gt;...
 </article>
 
           
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/quan-xian-zu-jian-authority/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">权限组件 authority</h3>
-    </a>
-    <a href="/post/quan-xian-zu-jian-authority/" class="post-card__excerpt clamp-2">
-      这里将使用渲染函数实现上面介绍过的的权限按钮。使用方式如下，把需要控制权限的按钮包在权限组件 authority 里面，如果有该权限就显示，没有就不显示。
-&amp;lt;authority :auth=&amp;quot;[&#39;admin&#39;]&amp;quo...
-    </a>
-    <div class="post-card__meta meta-text">
-      2020-10-09
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/yi-mu-liao-ran-de-zhu-shi/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">一目了然的注释</h3>
-    </a>
-    <a href="/post/yi-mu-liao-ran-de-zhu-shi/" class="post-card__excerpt clamp-2">
-      TODO 在该注释处有功能代码待编写，待实现的功能在说明中会简略说明
-FIXME 在该注释处代码需要修正，甚至代码是错误的，不能工作，需要修复，如何修正会在说明中简略说明
-XXX 在该注释处代码虽然实现了功能，但是实现的方法有待商榷，...
-    </a>
-    <div class="post-card__meta meta-text">
-      2020-09-29
-      
-    </div>
-  </div>
-  
-</article>
-
-          
-          <article class="post-card post-card--list">
-  <div class="post-card__body">
-    <a href="/post/vue-router-kong-zhi-lu-you-quan-xian/" class="post-card__title-link">
-      <h3 class="post-card__title clamp-3">vue-router 控制路由权限</h3>
-    </a>
-    <a href="/post/vue-router-kong-zhi-lu-you-quan-xian/" class="post-card__excerpt clamp-2">
-      // src/utils/index.js
-const { pathToRegexp } = require(&#39;path-to-regexp&#39;);
-
-export function getAuthRouters(authMenu...
-    </a>
-    <div class="post-card__meta meta-text">
-      2020-09-24
-      
-    </div>
-  </div>
-  
-</article>
-
-          
         </div>
       </section>
       
@@ -507,99 +509,103 @@ export function getAuthRouters(authMenu...
           
           <a href="/tag/vue3/" class="tag-pill">vue3</a>
           
-          <a href="/tag/CSS3/" class="tag-pill">CSS3</a>
+          <a href="/tag/pinia/" class="tag-pill">pinia</a>
           
-          <a href="/tag/video/" class="tag-pill">video</a>
-          
-          <a href="/tag/Webpack/" class="tag-pill">Webpack</a>
-          
-          <a href="/tag/linux/" class="tag-pill">linux</a>
-          
-          <a href="/tag/tree-data/" class="tag-pill">tree-data</a>
-          
-          <a href="/tag/canvas/" class="tag-pill">canvas</a>
-          
-          <a href="/tag/css 特效/" class="tag-pill">css 特效</a>
-          
-          <a href="/tag/转载/" class="tag-pill">转载</a>
-          
-          <a href="/tag/Babel/" class="tag-pill">Babel</a>
-          
-          <a href="/tag/骨架屏/" class="tag-pill">骨架屏</a>
-          
-          <a href="/tag/Date/" class="tag-pill">Date</a>
-          
-          <a href="/tag/Vue/" class="tag-pill">Vue</a>
-          
-          <a href="/tag/vue-router/" class="tag-pill">vue-router</a>
-          
-          <a href="/tag/file-saver/" class="tag-pill">file-saver</a>
-          
-          <a href="/tag/递归/" class="tag-pill">递归</a>
-          
-          <a href="/tag/富文本/" class="tag-pill">富文本</a>
-          
-          <a href="/tag/tree/" class="tag-pill">tree</a>
-          
-          <a href="/tag/JS/" class="tag-pill">JS</a>
-          
-          <a href="/tag/导航/" class="tag-pill">导航</a>
-          
-          <a href="/tag/正则/" class="tag-pill">正则</a>
-          
-          <a href="/tag/editor/" class="tag-pill">editor</a>
-          
-          <a href="/tag/pdf/" class="tag-pill">pdf</a>
-          
-          <a href="/tag/Vue cli 配置/" class="tag-pill">Vue cli 配置</a>
-          
-          <a href="/tag/CSS/" class="tag-pill">CSS</a>
-          
-          <a href="/tag/scss/" class="tag-pill">scss</a>
-          
-          <a href="/tag/axios/" class="tag-pill">axios</a>
-          
-          <a href="/tag/MongoDB/" class="tag-pill">MongoDB</a>
-          
-          <a href="/tag/Node/" class="tag-pill">Node</a>
-          
-          <a href="/tag/表单/" class="tag-pill">表单</a>
+          <a href="/tag/nodejs/" class="tag-pill">nodejs</a>
           
           <a href="/tag/BFF/" class="tag-pill">BFF</a>
           
-          <a href="/tag/微信开发/" class="tag-pill">微信开发</a>
+          <a href="/tag/递归/" class="tag-pill">递归</a>
+          
+          <a href="/tag/linux/" class="tag-pill">linux</a>
+          
+          <a href="/tag/骨架屏/" class="tag-pill">骨架屏</a>
+          
+          <a href="/tag/tree/" class="tag-pill">tree</a>
+          
+          <a href="/tag/DOM/" class="tag-pill">DOM</a>
+          
+          <a href="/tag/导航/" class="tag-pill">导航</a>
+          
+          <a href="/tag/canvas/" class="tag-pill">canvas</a>
+          
+          <a href="/tag/正则/" class="tag-pill">正则</a>
+          
+          <a href="/tag/CSS/" class="tag-pill">CSS</a>
+          
+          <a href="/tag/表格合并/" class="tag-pill">表格合并</a>
+          
+          <a href="/tag/React/" class="tag-pill">React</a>
+          
+          <a href="/tag/file-saver/" class="tag-pill">file-saver</a>
+          
+          <a href="/tag/js utils/" class="tag-pill">js utils</a>
+          
+          <a href="/tag/PDF 工具/" class="tag-pill">PDF 工具</a>
+          
+          <a href="/tag/Vue/" class="tag-pill">Vue</a>
+          
+          <a href="/tag/转载/" class="tag-pill">转载</a>
+          
+          <a href="/tag/权限组件/" class="tag-pill">权限组件</a>
+          
+          <a href="/tag/CSS3/" class="tag-pill">CSS3</a>
+          
+          <a href="/tag/表单/" class="tag-pill">表单</a>
+          
+          <a href="/tag/Node/" class="tag-pill">Node</a>
+          
+          <a href="/tag/小程序/" class="tag-pill">小程序</a>
+          
+          <a href="/tag/css 特效/" class="tag-pill">css 特效</a>
+          
+          <a href="/tag/BOM/" class="tag-pill">BOM</a>
+          
+          <a href="/tag/pdf/" class="tag-pill">pdf</a>
+          
+          <a href="/tag/Webpack/" class="tag-pill">Webpack</a>
+          
+          <a href="/tag/Vue cli 配置/" class="tag-pill">Vue cli 配置</a>
+          
+          <a href="/tag/MongoDB/" class="tag-pill">MongoDB</a>
+          
+          <a href="/tag/uniapp/" class="tag-pill">uniapp</a>
+          
+          <a href="/tag/注释/" class="tag-pill">注释</a>
           
           <a href="/tag/水印/" class="tag-pill">水印</a>
           
           <a href="/tag/ECMAScript/" class="tag-pill">ECMAScript</a>
           
-          <a href="/tag/uniapp/" class="tag-pill">uniapp</a>
+          <a href="/tag/video/" class="tag-pill">video</a>
           
-          <a href="/tag/权限组件/" class="tag-pill">权限组件</a>
-          
-          <a href="/tag/支付/" class="tag-pill">支付</a>
-          
-          <a href="/tag/表格合并/" class="tag-pill">表格合并</a>
+          <a href="/tag/微信开发/" class="tag-pill">微信开发</a>
           
           <a href="/tag/Express/" class="tag-pill">Express</a>
           
-          <a href="/tag/DOM/" class="tag-pill">DOM</a>
+          <a href="/tag/富文本/" class="tag-pill">富文本</a>
           
-          <a href="/tag/BOM/" class="tag-pill">BOM</a>
+          <a href="/tag/tree-data/" class="tag-pill">tree-data</a>
           
-          <a href="/tag/React/" class="tag-pill">React</a>
+          <a href="/tag/editor/" class="tag-pill">editor</a>
           
-          <a href="/tag/jszip/" class="tag-pill">jszip</a>
+          <a href="/tag/axios/" class="tag-pill">axios</a>
           
-          <a href="/tag/js utils/" class="tag-pill">js utils</a>
+          <a href="/tag/Date/" class="tag-pill">Date</a>
           
           <a href="/tag/面试/" class="tag-pill">面试</a>
           
-          <a href="/tag/PDF 工具/" class="tag-pill">PDF 工具</a>
+          <a href="/tag/JS/" class="tag-pill">JS</a>
           
-          <a href="/tag/小程序/" class="tag-pill">小程序</a>
+          <a href="/tag/vue-router/" class="tag-pill">vue-router</a>
           
-          <a href="/tag/注释/" class="tag-pill">注释</a>
+          <a href="/tag/scss/" class="tag-pill">scss</a>
+          
+          <a href="/tag/支付/" class="tag-pill">支付</a>
+          
+          <a href="/tag/jszip/" class="tag-pill">jszip</a>
+          
+          <a href="/tag/Babel/" class="tag-pill">Babel</a>
           
         </div>
       </div>

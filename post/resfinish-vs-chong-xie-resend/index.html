@@ -27,26 +27,26 @@
 
 
   <meta name="generator" content="Gridea Pro 1.1.1">
-  <title>Vue.observable | 松的Blog</title>
+  <title>res.finish vs 重写 res.end | 松的Blog</title>
   
-<meta property="og:title" content="Vue.observable" />
+<meta property="og:title" content="res.finish vs 重写 res.end" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...">
-<link rel="canonical" href="https://zss1004504439.github.io/post/vue.observable/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Vue.observable","url":"https://zss1004504439.github.io/post/vue.observable/","description":"不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...","datePublished":"2019-09-16T10:27:50+08:00","dateModified":"2026-04-17T11:19:42+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/vue.observable/","name":"Vue.observable","position":2}]}</script>
-<meta property="og:title" content="Vue.observable">
-<meta property="og:description" content="不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...">
-<meta property="og:url" content="https://zss1004504439.github.io/post/vue.observable/">
+<meta name="description" content="监听 res.finish 事件 res.finish 是 Node.js HTTP 原生事件，响应数据全部发送到客户端后触发，无需修改原生 API，安全规范。 export function logger() { return async (req, res, next) =&amp;gt; { const start = Date.now(); const ...">
+<link rel="canonical" href="https://zss1004504439.github.io/post/resfinish-vs-chong-xie-resend/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"res.finish vs 重写 res.end","url":"https://zss1004504439.github.io/post/resfinish-vs-chong-xie-resend/","description":"监听 res.finish 事件 res.finish 是 Node.js HTTP 原生事件，响应数据全部发送到客户端后触发，无需修改原生 API，安全规范。 export function logger() { return async (req, res, next) =\u0026gt; { const start = Date.now(); const ...","datePublished":"2025-04-23T14:50:27+08:00","dateModified":"2026-04-23T18:52:49+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/resfinish-vs-chong-xie-resend/","name":"res.finish vs 重写 res.end","position":2}]}</script>
+<meta property="og:title" content="res.finish vs 重写 res.end">
+<meta property="og:description" content="监听 res.finish 事件 res.finish 是 Node.js HTTP 原生事件，响应数据全部发送到客户端后触发，无需修改原生 API，安全规范。 export function logger() { return async (req, res, next) =&amp;gt; { const start = Date.now(); const ...">
+<meta property="og:url" content="https://zss1004504439.github.io/post/resfinish-vs-chong-xie-resend/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="松的Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://zss1004504439.github.io/post/vue.observable/">
-<meta name="twitter:title" content="Vue.observable">
-<meta name="twitter:description" content="不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...">
+<meta name="twitter:url" content="https://zss1004504439.github.io/post/resfinish-vs-chong-xie-resend/">
+<meta name="twitter:title" content="res.finish vs 重写 res.end">
+<meta name="twitter:description" content="监听 res.finish 事件 res.finish 是 Node.js HTTP 原生事件，响应数据全部发送到客户端后触发，无需修改原生 API，安全规范。 export function logger() { return async (req, res, next) =&amp;gt; { const start = Date.now(); const ...">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -133,19 +133,19 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">Vue.observable</h1>
+    <h1 class="article-title">res.finish vs 重写 res.end</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2019-09-16</span>
+      <span class="article-meta__item">2025-04-23</span>
       
       <span class="article-meta__sep">·</span>
-      <span class="article-meta__item">1 分钟阅读</span>
+      <span class="article-meta__item">2 分钟阅读</span>
       
     </div>
     
     <div class="article-header__tags">
       
-      <a href="/tag/Vue/" class="tag-pill tag-pill--sm">Vue</a>
+      <a href="/tag/nodejs/" class="tag-pill tag-pill--sm">nodejs</a>
       
     </div>
     
@@ -154,59 +154,47 @@
   
 
   <div class="article-content">
-    <h2 id="vuexstorevueobservable">不使用Vuex创建Store(Vue.observable)</h2>
-<p><code>Vue.observable({})</code>返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景：</p>
-<pre><code>const state = Vue.observable({ count: 0 })
+    <h2 id="-resfinish-">监听 res.finish 事件</h2>
+<p>res.finish 是 Node.js HTTP 原生事件，响应数据全部发送到客户端后触发，无需修改原生 API，安全规范。</p>
+<pre><code class="language-js">export function logger() {
+  return async (req, res, next) =&gt; {
+    const start = Date.now();
+    const { method, url } = req;
 
-const Demo = {
-  render(h) {
-    return h('button', {
-      on: { click: () =&gt; { state.count++ }}
-    }, `count is: ${state.count}`)
-  }
+    await next();
+
+    res.on('finish', () =&gt; {
+      const duration = Date.now() - start;
+      const status = res.statusCode;
+      const color = status &gt;= 500 ? '\x1b[31m' : status &gt;= 400 ? '\x1b[33m' : '\x1b[32m';
+      console.log(`${color}${status}\x1b[0m ${method} ${url} — ${duration}ms`);
+    });
+  };
 }
 </code></pre>
-<p>我们可以利用这个API来应对一些简单的跨组件数据状态共享的情况.</p>
-<pre><code>// miniStore.js
+<h2 id="resend-chunk">res.end 是发送响应的核心方法，重写它可在响应发送前，捕获传入的响应数据（chunk），获取完整业务返回内容。</h2>
+<pre><code class="language-js">export function logger() {
+  return async (req, res, next) =&gt; {
+    const start = Date.now();
+    const { method, url } = req;
+    const originalEnd = res.end; // 保存原生方法
 
-import Vue from &quot;vue&quot;;
- 
-export const miniStore = Vue.observable({ count: 0 });
- 
-export const actions = {
-  setCount(count) {
-    miniStore.count = count;
-  }
-}
+    res.end = function (chunk, encoding) {
+      res.end = originalEnd; // 立即恢复，避免污染
+      const result = originalEnd.call(this, chunk, encoding);
+      
+      const responseBody = chunk?.toString(encoding) || '';
+      const duration = Date.now() - start;
+      const status = res.statusCode;
+      const color = status &gt;= 500 ? '\x1b[31m' : status &gt;= 400 ? '\x1b[33m' : '\x1b[32m';
+      
+      console.log(`${color}${status}\x1b[0m ${method} ${url} — ${duration}ms`, '响应体：', responseBody);
+      return result;
+    };
 
-export const getters = {
-  count: () =&gt; miniStore.count
+    await next();
+  };
 }
-</code></pre>
-<pre><code>// Demo.vue
-&lt;template&gt;
-  &lt;div&gt;
-    &lt;p&gt;count:{{count}}&lt;/p&gt;
-    &lt;button @click=&quot;add&quot;&gt; +1 &lt;/button&gt;
-    &lt;button @click=&quot;sub&quot;&gt; -1 &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
- 
-&lt;script&gt;
-import { actions, getters } from &quot;./store&quot;;
-export default {
-  name: &quot;App&quot;,
-  computed: {
-    count() {
-      return getters.count;
-    }
-  },
-  methods: {
-    add: actions.setCount(this.count+1),
-    sub: actions.setCount(this.count-1)
-  }
-};
-&lt;/script&gt;
 </code></pre>
 
   </div>
@@ -214,20 +202,20 @@ export default {
   
   <nav class="post-nav">
     
-    <a href="/post/vue-zuo-yong-yu-cha-cao/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/zi-ding-yi-cuo-wu-lei/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">Vue 作用域插槽</span>
+        <span class="post-nav-card__title">自定义错误类</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/flex-bu-ju-bi-ji-ji-chu-bu-fen/" class="post-nav-card post-nav-card--next">
+    <a href="/post/express-redis-shi-xian-jie-kou-huan-cun-zui-jia-shi-jian/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">Flex布局笔记-基础部分</span>
+        <span class="post-nav-card__title">express + redis 实现接口缓存最佳实践</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

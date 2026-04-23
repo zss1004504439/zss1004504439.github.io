@@ -27,26 +27,26 @@
 
 
   <meta name="generator" content="Gridea Pro 1.1.1">
-  <title>Vue.observable | 松的Blog</title>
+  <title>Vue 3 动态路由 Pinia 状态同步踩坑 | 松的Blog</title>
   
-<meta property="og:title" content="Vue.observable" />
+<meta property="og:title" content="Vue 3 动态路由 Pinia 状态同步踩坑" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...">
-<link rel="canonical" href="https://zss1004504439.github.io/post/vue.observable/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Vue.observable","url":"https://zss1004504439.github.io/post/vue.observable/","description":"不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...","datePublished":"2019-09-16T10:27:50+08:00","dateModified":"2026-04-17T11:19:42+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/vue.observable/","name":"Vue.observable","position":2}]}</script>
-<meta property="og:title" content="Vue.observable">
-<meta property="og:description" content="不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...">
-<meta property="og:url" content="https://zss1004504439.github.io/post/vue.observable/">
+<meta name="description" content="在 Vue 3 中结合动态路由（/course/:id）和 Pinia 设计 Store 时，核心挑战在于确保 Store 的状态与当前路由参数同步，尤其是在同一个组件实例被复用（即从 /course/1 跳转到 /course/2）时。 以下是三种推荐的设计方案： 1. 组合式设计（推荐）：以 ID 为核心的响应式 Store 这种方式最符&amp;hellip;">
+<link rel="canonical" href="https://zss1004504439.github.io/post/vue-3-dong-tai-lu-you-pinia-zhuang-tai-tong-bu-cai-keng/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Vue 3 动态路由 Pinia 状态同步踩坑","url":"https://zss1004504439.github.io/post/vue-3-dong-tai-lu-you-pinia-zhuang-tai-tong-bu-cai-keng/","description":"在 Vue 3 中结合动态路由（/course/:id）和 Pinia 设计 Store 时，核心挑战在于确保 Store 的状态与当前路由参数同步，尤其是在同一个组件实例被复用（即从 /course/1 跳转到 /course/2）时。 以下是三种推荐的设计方案： 1. 组合式设计（推荐）：以 ID 为核心的响应式 Store 这种方式最符\u0026hellip;","datePublished":"2025-04-23T18:41:23+08:00","dateModified":"2025-04-23T18:51:57+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/vue-3-dong-tai-lu-you-pinia-zhuang-tai-tong-bu-cai-keng/","name":"Vue 3 动态路由 Pinia 状态同步踩坑","position":2}]}</script>
+<meta property="og:title" content="Vue 3 动态路由 Pinia 状态同步踩坑">
+<meta property="og:description" content="在 Vue 3 中结合动态路由（/course/:id）和 Pinia 设计 Store 时，核心挑战在于确保 Store 的状态与当前路由参数同步，尤其是在同一个组件实例被复用（即从 /course/1 跳转到 /course/2）时。 以下是三种推荐的设计方案： 1. 组合式设计（推荐）：以 ID 为核心的响应式 Store 这种方式最符&amp;hellip;">
+<meta property="og:url" content="https://zss1004504439.github.io/post/vue-3-dong-tai-lu-you-pinia-zhuang-tai-tong-bu-cai-keng/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="松的Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://zss1004504439.github.io/post/vue.observable/">
-<meta name="twitter:title" content="Vue.observable">
-<meta name="twitter:description" content="不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...">
+<meta name="twitter:url" content="https://zss1004504439.github.io/post/vue-3-dong-tai-lu-you-pinia-zhuang-tai-tong-bu-cai-keng/">
+<meta name="twitter:title" content="Vue 3 动态路由 Pinia 状态同步踩坑">
+<meta name="twitter:description" content="在 Vue 3 中结合动态路由（/course/:id）和 Pinia 设计 Store 时，核心挑战在于确保 Store 的状态与当前路由参数同步，尤其是在同一个组件实例被复用（即从 /course/1 跳转到 /course/2）时。 以下是三种推荐的设计方案： 1. 组合式设计（推荐）：以 ID 为核心的响应式 Store 这种方式最符&amp;hellip;">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -133,19 +133,19 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">Vue.observable</h1>
+    <h1 class="article-title">Vue 3 动态路由 Pinia 状态同步踩坑</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2019-09-16</span>
+      <span class="article-meta__item">2025-04-23</span>
       
       <span class="article-meta__sep">·</span>
-      <span class="article-meta__item">1 分钟阅读</span>
+      <span class="article-meta__item">3 分钟阅读</span>
       
     </div>
     
     <div class="article-header__tags">
       
-      <a href="/tag/Vue/" class="tag-pill tag-pill--sm">Vue</a>
+      <a href="/tag/pinia/" class="tag-pill tag-pill--sm">pinia</a>
       
     </div>
     
@@ -154,80 +154,120 @@
   
 
   <div class="article-content">
-    <h2 id="vuexstorevueobservable">不使用Vuex创建Store(Vue.observable)</h2>
-<p><code>Vue.observable({})</code>返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景：</p>
-<pre><code>const state = Vue.observable({ count: 0 })
+    <p>在 Vue 3 中结合动态路由（<code>/course/:id</code>）和 Pinia 设计 Store 时，核心挑战在于<strong>确保 Store 的状态与当前路由参数同步</strong>，尤其是在同一个组件实例被复用（即从 <code>/course/1</code> 跳转到 <code>/course/2</code>）时。</p>
+<p>以下是三种推荐的设计方案：</p>
+<hr />
+<h3 id="1--id--store">1. 组合式设计（推荐）：以 ID 为核心的响应式 Store</h3>
+<p>这种方式最符合 Vue 3 的心智模型。不再是在组件里手动调用 <code>fetch</code>，而是让 Store 监听 ID 的变化。</p>
+<pre><code class="language-javascript">import { defineStore } from 'pinia';
+import { ref, watch } from 'vue';
 
-const Demo = {
-  render(h) {
-    return h('button', {
-      on: { click: () =&gt; { state.count++ }}
-    }, `count is: ${state.count}`)
-  }
-}
-</code></pre>
-<p>我们可以利用这个API来应对一些简单的跨组件数据状态共享的情况.</p>
-<pre><code>// miniStore.js
+export const useCourseStore = defineStore('course-detail', () =&gt; {
+  const courseId = ref(null);
+  const details = ref(null);
+  const loading = ref(false);
 
-import Vue from &quot;vue&quot;;
- 
-export const miniStore = Vue.observable({ count: 0 });
- 
-export const actions = {
-  setCount(count) {
-    miniStore.count = count;
-  }
-}
+  // 设置 ID 并自动触发更新
+  const setCourseId = async (id) =&gt; {
+    if (courseId.value === id) return;
+    courseId.value = id;
+    await fetchCourseDetail();
+  };
 
-export const getters = {
-  count: () =&gt; miniStore.count
-}
-</code></pre>
-<pre><code>// Demo.vue
-&lt;template&gt;
-  &lt;div&gt;
-    &lt;p&gt;count:{{count}}&lt;/p&gt;
-    &lt;button @click=&quot;add&quot;&gt; +1 &lt;/button&gt;
-    &lt;button @click=&quot;sub&quot;&gt; -1 &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
- 
-&lt;script&gt;
-import { actions, getters } from &quot;./store&quot;;
-export default {
-  name: &quot;App&quot;,
-  computed: {
-    count() {
-      return getters.count;
+  const fetchCourseDetail = async () =&gt; {
+    loading.value = true;
+    try {
+      // 模拟 API 请求
+      // const res = await api.getCourse(courseId.value);
+      // details.value = res.data;
+    } finally {
+      loading.value = false;
     }
-  },
-  methods: {
-    add: actions.setCount(this.count+1),
-    sub: actions.setCount(this.count-1)
-  }
-};
+  };
+
+  // 重置状态（离开页面时调用）
+  const reset = () =&gt; {
+    courseId.value = null;
+    details.value = null;
+  };
+
+  return { courseId, details, loading, setCourseId, reset };
+});
+</code></pre>
+<hr />
+<h3 id="2-">2. 路由守卫集成：确保“数据先于页面”</h3>
+<p>为了避免页面渲染后出现瞬间的空白或旧数据，可以在组件的 <code>onBeforeRouteUpdate</code> 或全局守卫中触发 Store 更新。</p>
+<p><strong>在组件中使用：</strong></p>
+<pre><code class="language-vue">&lt;script setup&gt;
+import { useCourseStore } from '@/stores/course';
+import { onMounted } from 'vue';
+import { useRoute, onBeforeRouteUpdate } from 'vue-router';
+
+const store = useCourseStore();
+const route = useRoute();
+
+// 初始进入
+onMounted(() =&gt; {
+  store.setCourseId(route.params.id);
+});
+
+// 路由参数变化（如同一个页面切换不同课程）
+onBeforeRouteUpdate((to) =&gt; {
+  store.setCourseId(to.params.id);
+});
 &lt;/script&gt;
 </code></pre>
+<hr />
+<h3 id="3-">3. 设计要点总结</h3>
+<table>
+<thead>
+<tr>
+<th align="left">关注点</th>
+<th align="left">建议方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>状态清理</strong></td>
+<td align="left">在 <code>onUnmounted</code> 时调用 <code>store.$reset()</code> 或自定义 <code>reset()</code>。防止用户进入新课程时先看到上一个课程的残余数据。</td>
+</tr>
+<tr>
+<td align="left"><strong>数据缓存</strong></td>
+<td align="left">如果不需要实时性，可以在 <code>fetchCourseDetail</code> 中根据 ID 判断，如果缓存中已有数据则跳过请求。</td>
+</tr>
+<tr>
+<td align="left"><strong>唯一性</strong></td>
+<td align="left">如果你的应用支持多开 Tab（如某些后台系统），考虑使用 <code>Map&lt;id, data&gt;</code> 结构存储，而不是单一的 <code>details</code> 对象。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="heading">进阶：多实例管理（针对复杂场景）</h3>
+<p>如果你的系统允许同时打开多个课程页面（例如在 Monorepo 或标签页架构中），建议在 Store 内部使用对象存储：</p>
+<pre><code class="language-javascript">const courses = ref({}); // { '101': { name: 'Vue' }, '102': { name: 'Nuxt' } }
+
+const currentCourse = computed(() =&gt; courses.value[courseId.value]);
+</code></pre>
+<p><strong>建议技巧：</strong> 由于你正在处理 Vue 项目，可以利用 <strong>Pinia 的 <code>$onAction</code></strong> 订阅功能。如果需要对所有课程详情页进行埋点或统一错误处理，这比在每个组件写 <code>try...catch</code> 更优雅。</p>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/vue-zuo-yong-yu-cha-cao/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/get-yu-post-jie-kou-huan-cun-ji-zhi/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">Vue 作用域插槽</span>
+        <span class="post-nav-card__title">GET 与 POST 接口缓存机制</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/flex-bu-ju-bi-ji-ji-chu-bu-fen/" class="post-nav-card post-nav-card--next">
+    <a href="/post/zi-ding-yi-cuo-wu-lei/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">Flex布局笔记-基础部分</span>
+        <span class="post-nav-card__title">自定义错误类</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>

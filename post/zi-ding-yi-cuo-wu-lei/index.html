@@ -27,26 +27,26 @@
 
 
   <meta name="generator" content="Gridea Pro 1.1.1">
-  <title>Vue.observable | 松的Blog</title>
+  <title>自定义错误类 | 松的Blog</title>
   
-<meta property="og:title" content="Vue.observable" />
+<meta property="og:title" content="自定义错误类" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...">
-<link rel="canonical" href="https://zss1004504439.github.io/post/vue.observable/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Vue.observable","url":"https://zss1004504439.github.io/post/vue.observable/","description":"不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...","datePublished":"2019-09-16T10:27:50+08:00","dateModified":"2026-04-17T11:19:42+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/vue.observable/","name":"Vue.observable","position":2}]}</script>
-<meta property="og:title" content="Vue.observable">
-<meta property="og:description" content="不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...">
-<meta property="og:url" content="https://zss1004504439.github.io/post/vue.observable/">
+<meta name="description" content="// errors/base.ts export class AppError extends Error { public readonly statusCode: number; public readonly isOperational: boolean; public readonly code: string; construc...">
+<link rel="canonical" href="https://zss1004504439.github.io/post/zi-ding-yi-cuo-wu-lei/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"自定义错误类","url":"https://zss1004504439.github.io/post/zi-ding-yi-cuo-wu-lei/","description":"// errors/base.ts export class AppError extends Error { public readonly statusCode: number; public readonly isOperational: boolean; public readonly code: string; construc...","datePublished":"2025-04-23T15:06:18+08:00","dateModified":"2026-04-23T18:53:10+08:00","author":{"@type":"Person","name":"松的Blog"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松的Blog"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松的Blog","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/zi-ding-yi-cuo-wu-lei/","name":"自定义错误类","position":2}]}</script>
+<meta property="og:title" content="自定义错误类">
+<meta property="og:description" content="// errors/base.ts export class AppError extends Error { public readonly statusCode: number; public readonly isOperational: boolean; public readonly code: string; construc...">
+<meta property="og:url" content="https://zss1004504439.github.io/post/zi-ding-yi-cuo-wu-lei/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="松的Blog">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://zss1004504439.github.io/post/vue.observable/">
-<meta name="twitter:title" content="Vue.observable">
-<meta name="twitter:description" content="不使用Vuex创建Store(Vue.observable) Vue.observable({})返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景： const state = Vue.observable({ count: 0 }) const Demo = { render(h)...">
+<meta name="twitter:url" content="https://zss1004504439.github.io/post/zi-ding-yi-cuo-wu-lei/">
+<meta name="twitter:title" content="自定义错误类">
+<meta name="twitter:description" content="// errors/base.ts export class AppError extends Error { public readonly statusCode: number; public readonly isOperational: boolean; public readonly code: string; construc...">
 <meta name="twitter:image" content="/images/avatar.png">
 </head>
 <body class="flavor-theme">
@@ -133,19 +133,13 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">Vue.observable</h1>
+    <h1 class="article-title">自定义错误类</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2019-09-16</span>
+      <span class="article-meta__item">2025-04-23</span>
       
       <span class="article-meta__sep">·</span>
-      <span class="article-meta__item">1 分钟阅读</span>
-      
-    </div>
-    
-    <div class="article-header__tags">
-      
-      <a href="/tag/Vue/" class="tag-pill tag-pill--sm">Vue</a>
+      <span class="article-meta__item">2 分钟阅读</span>
       
     </div>
     
@@ -154,59 +148,55 @@
   
 
   <div class="article-content">
-    <h2 id="vuexstorevueobservable">不使用Vuex创建Store(Vue.observable)</h2>
-<p><code>Vue.observable({})</code>返回的对象可以直接用于渲染函数和计算属性内，并且会在发生改变时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景：</p>
-<pre><code>const state = Vue.observable({ count: 0 })
+    <pre><code class="language-typescript">// errors/base.ts
+export class AppError extends Error {
+  public readonly statusCode: number;
+  public readonly isOperational: boolean;
+  public readonly code: string;
 
-const Demo = {
-  render(h) {
-    return h('button', {
-      on: { click: () =&gt; { state.count++ }}
-    }, `count is: ${state.count}`)
-  }
-}
-</code></pre>
-<p>我们可以利用这个API来应对一些简单的跨组件数据状态共享的情况.</p>
-<pre><code>// miniStore.js
-
-import Vue from &quot;vue&quot;;
- 
-export const miniStore = Vue.observable({ count: 0 });
- 
-export const actions = {
-  setCount(count) {
-    miniStore.count = count;
+  constructor(message: string, statusCode: number, code: string) {
+    super(message);
+    this.statusCode = statusCode;
+    this.isOperational = true; // 可预期的业务错误
+    this.code = code;
+    Error.captureStackTrace(this, this.constructor);
   }
 }
 
-export const getters = {
-  count: () =&gt; miniStore.count
-}
-</code></pre>
-<pre><code>// Demo.vue
-&lt;template&gt;
-  &lt;div&gt;
-    &lt;p&gt;count:{{count}}&lt;/p&gt;
-    &lt;button @click=&quot;add&quot;&gt; +1 &lt;/button&gt;
-    &lt;button @click=&quot;sub&quot;&gt; -1 &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
- 
-&lt;script&gt;
-import { actions, getters } from &quot;./store&quot;;
-export default {
-  name: &quot;App&quot;,
-  computed: {
-    count() {
-      return getters.count;
-    }
-  },
-  methods: {
-    add: actions.setCount(this.count+1),
-    sub: actions.setCount(this.count-1)
+// 具体错误类
+export class NotFoundError extends AppError {
+  constructor(resource: string, id?: string | number) {
+    const msg = id ? `${resource} (id: ${id}) 不存在` : `${resource}不存在`;
+    super(msg, 404, 'NOT_FOUND');
   }
-};
-&lt;/script&gt;
+}
+
+export class ValidationError extends AppError {
+  public readonly errors: Array&lt;{ field: string; message: string }&gt;;
+
+  constructor(errors: Array&lt;{ field: string; message: string }&gt;) {
+    super('请求参数验证失败', 422, 'VALIDATION_ERROR');
+    this.errors = errors;
+  }
+}
+
+export class UnauthorizedError extends AppError {
+  constructor(message = '请先登录') {
+    super(message, 401, 'UNAUTHORIZED');
+  }
+}
+
+export class ForbiddenError extends AppError {
+  constructor(message = '无权访问') {
+    super(message, 403, 'FORBIDDEN');
+  }
+}
+
+export class ConflictError extends AppError {
+  constructor(message: string) {
+    super(message, 409, 'CONFLICT');
+  }
+}
 </code></pre>
 
   </div>
@@ -214,20 +204,20 @@ export default {
   
   <nav class="post-nav">
     
-    <a href="/post/vue-zuo-yong-yu-cha-cao/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/vue-3-dong-tai-lu-you-pinia-zhuang-tai-tong-bu-cai-keng/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">Vue 作用域插槽</span>
+        <span class="post-nav-card__title">Vue 3 动态路由 Pinia 状态同步踩坑</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/flex-bu-ju-bi-ji-ji-chu-bu-fen/" class="post-nav-card post-nav-card--next">
+    <a href="/post/resfinish-vs-chong-xie-resend/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">Flex布局笔记-基础部分</span>
+        <span class="post-nav-card__title">res.finish vs 重写 res.end</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
