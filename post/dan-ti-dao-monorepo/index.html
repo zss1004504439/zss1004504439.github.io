@@ -27,27 +27,27 @@
 
 
   <meta name="generator" content="Gridea Pro 1.1.1">
-  <title>Nitro 缓存 maxAge 和 staleMaxAge 区别 | 松</title>
+  <title>单体到Monorepo | 松</title>
   
-<meta property="og:title" content="Nitro 缓存 maxAge 和 staleMaxAge 区别" />
+<meta property="og:title" content="单体到Monorepo" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="简单理解： maxAge：缓存正经“保质期”。 这段时间内，数据直接用，不用重新计算/请求，干净又新鲜。 staleMaxAge：过期“宽限期”。 过了 maxAge 但还在 staleMaxAge 里，先给你旧数据用着，后台悄悄去更新，不卡请求、不报错。 一句话总结： **maxAge 管新鲜多久，staleMaxAge 管过期了还能先用多久。&amp;hellip;">
+<meta name="description" content="https://juejin.cn/post/7549930693388927027 sichuanji-cc/ ├── apps/ # 应用层：隔离但统一 │ ├── web/ # 前台官网 (3000端口) │ └── admin/ # 管理后台 (3001端口) ├...">
 <meta name="keywords" content="vue,nuxt3,nodejs">
-<link rel="canonical" href="https://zss1004504439.github.io/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Nitro 缓存 maxAge 和 staleMaxAge 区别","url":"https://zss1004504439.github.io/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/","description":"简单理解： maxAge：缓存正经“保质期”。 这段时间内，数据直接用，不用重新计算/请求，干净又新鲜。 staleMaxAge：过期“宽限期”。 过了 maxAge 但还在 staleMaxAge 里，先给你旧数据用着，后台悄悄去更新，不卡请求、不报错。 一句话总结： **maxAge 管新鲜多久，staleMaxAge 管过期了还能先用多久。\u0026hellip;","datePublished":"2024-11-06T13:57:34+08:00","dateModified":"2026-04-17T14:00:54+08:00","author":{"@type":"Person","name":"松"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/","name":"Nitro 缓存 maxAge 和 staleMaxAge 区别","position":2}]}</script>
-<meta property="og:title" content="Nitro 缓存 maxAge 和 staleMaxAge 区别">
-<meta property="og:description" content="简单理解： maxAge：缓存正经“保质期”。 这段时间内，数据直接用，不用重新计算/请求，干净又新鲜。 staleMaxAge：过期“宽限期”。 过了 maxAge 但还在 staleMaxAge 里，先给你旧数据用着，后台悄悄去更新，不卡请求、不报错。 一句话总结： **maxAge 管新鲜多久，staleMaxAge 管过期了还能先用多久。&amp;hellip;">
-<meta property="og:url" content="https://zss1004504439.github.io/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/">
+<link rel="canonical" href="https://zss1004504439.github.io/post/dan-ti-dao-monorepo/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"单体到Monorepo","url":"https://zss1004504439.github.io/post/dan-ti-dao-monorepo/","description":"https://juejin.cn/post/7549930693388927027 sichuanji-cc/ ├── apps/ # 应用层：隔离但统一 │ ├── web/ # 前台官网 (3000端口) │ └── admin/ # 管理后台 (3001端口) ├...","datePublished":"2026-05-09T11:04:03+08:00","dateModified":"2026-05-09T11:04:03+08:00","author":{"@type":"Person","name":"松"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/dan-ti-dao-monorepo/","name":"单体到Monorepo","position":2}]}</script>
+<meta property="og:title" content="单体到Monorepo">
+<meta property="og:description" content="https://juejin.cn/post/7549930693388927027 sichuanji-cc/ ├── apps/ # 应用层：隔离但统一 │ ├── web/ # 前台官网 (3000端口) │ └── admin/ # 管理后台 (3001端口) ├...">
+<meta property="og:url" content="https://zss1004504439.github.io/post/dan-ti-dao-monorepo/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="松">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://zss1004504439.github.io/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/">
-<meta name="twitter:title" content="Nitro 缓存 maxAge 和 staleMaxAge 区别">
-<meta name="twitter:description" content="简单理解： maxAge：缓存正经“保质期”。 这段时间内，数据直接用，不用重新计算/请求，干净又新鲜。 staleMaxAge：过期“宽限期”。 过了 maxAge 但还在 staleMaxAge 里，先给你旧数据用着，后台悄悄去更新，不卡请求、不报错。 一句话总结： **maxAge 管新鲜多久，staleMaxAge 管过期了还能先用多久。&amp;hellip;">
+<meta name="twitter:url" content="https://zss1004504439.github.io/post/dan-ti-dao-monorepo/">
+<meta name="twitter:title" content="单体到Monorepo">
+<meta name="twitter:description" content="https://juejin.cn/post/7549930693388927027 sichuanji-cc/ ├── apps/ # 应用层：隔离但统一 │ ├── web/ # 前台官网 (3000端口) │ └── admin/ # 管理后台 (3001端口) ├...">
 <meta name="twitter:image" content="/images/avatar.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJ9JHRFE8M"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VJ9JHRFE8M');</script>
@@ -136,10 +136,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">Nitro 缓存 maxAge 和 staleMaxAge 区别</h1>
+    <h1 class="article-title">单体到Monorepo</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2024-11-06</span>
+      <span class="article-meta__item">2026-05-09</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -148,9 +148,7 @@
     
     <div class="article-header__tags">
       
-      <a href="/tag/nitro/" class="tag-pill tag-pill--sm">Nitro</a>
-      
-      <a href="/tag/huan-cun/" class="tag-pill tag-pill--sm">缓存</a>
+      <a href="/tag/monorepo/" class="tag-pill tag-pill--sm">Monorepo</a>
       
     </div>
     
@@ -159,31 +157,18 @@
   
 
   <div class="article-content">
-    <p>简单理解：</p>
-<ul>
-<li>
-<p><strong>maxAge</strong>：缓存正经“保质期”。<br />
-这段时间内，数据直接用，不用重新计算/请求，干净又新鲜。</p>
-</li>
-<li>
-<p><strong>staleMaxAge</strong>：过期“宽限期”。<br />
-过了 maxAge 但还在 staleMaxAge 里，先给你旧数据用着，后台悄悄去更新，不卡请求、不报错。</p>
-</li>
-</ul>
-<p>一句话总结：<br />
-<strong>maxAge 管新鲜多久，staleMaxAge 管过期了还能先用多久。</strong></p>
-<p>实际用的时候，一般这么配：<br />
-先设一个正常更新周期 <code>maxAge</code>，再给一段容错时间 <code>staleMaxAge</code>，既能保证速度，又不至于在服务波动时直接崩掉。</p>
-<pre><code class="language-js">export default defineCachedFunction(
-  () =&gt; {
-    // 生成响应的逻辑
-    return &quot;Cached response&quot;;
-  },
-  {
-    maxAge: 60, // 缓存1分钟（60秒）
-    staleMaxAge: 300, // 过期后仍可用5分钟（300秒）
-  }
-);
+    <h2 id="httpsjuejincnpost7549930693388927027"><a href="https://juejin.cn/post/7549930693388927027">https://juejin.cn/post/7549930693388927027</a></h2>
+<pre><code>sichuanji-cc/
+├── apps/                    # 应用层：隔离但统一
+│   ├── web/                # 前台官网 (3000端口)
+│   └── admin/              # 管理后台 (3001端口)
+├── packages/               # 共享层：核心价值所在
+│   ├── shared/             # 工具函数和类型定义
+│   ├── ui/                 # 可复用UI组件库
+│   ├── auth/               # 认证授权模块
+│   ├── database/           # 数据库访问层
+│   └── dev-tools/          # 开发工具配置
+
 </code></pre>
 
   </div>
@@ -191,18 +176,20 @@
   
   <nav class="post-nav">
     
-    <div class="post-nav-card post-nav-card--empty">
+    <a href="/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/" class="post-nav-card post-nav-card--prev">
+      
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__empty-text">没有上一篇了~</span>
+        <span class="post-nav-card__title">Nitro 缓存 maxAge 和 staleMaxAge 区别</span>
       </div>
-    </div>
+      <span class="post-nav-card__arrow">&larr;</span>
+    </a>
     
     
-    <a href="/post/dan-ti-dao-monorepo/" class="post-nav-card post-nav-card--next">
+    <a href="/post/webview-xing-neng-you-hua-shi-zhancong-shou-ping-15miao-dao-300hao-miao/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">单体到Monorepo</span>
+        <span class="post-nav-card__title">WebView 性能优化实战：从首屏1.5秒到300毫秒</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
