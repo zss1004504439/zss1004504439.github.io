@@ -27,27 +27,26 @@
 
 
   <meta name="generator" content="Gridea Pro 1.1.1">
-  <title>自定义指令directive | 松</title>
+  <title>nestjs生命周期 | 松</title>
   
-<meta property="og:title" content="自定义指令directive" />
+<meta property="og:title" content="nestjs生命周期" />
 <meta property="og:type" content="article" />
 
 
-<meta name="description" content="https://juejin.im/post/5eb7fc626fb9a0436a7c6af1 import Vue from 'vue' const preventReClick = Vue.directive('preventReClick', { inserted: function(el, binding) { el.addEventListener(...">
 <meta name="keywords" content="vue,nuxt3,nodejs">
-<link rel="canonical" href="https://zss1004504439.github.io/post/zi-ding-yi-zhi-ling-directive/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"自定义指令directive","url":"https://zss1004504439.github.io/post/zi-ding-yi-zhi-ling-directive/","description":"https://juejin.im/post/5eb7fc626fb9a0436a7c6af1 import Vue from 'vue' const preventReClick = Vue.directive('preventReClick', { inserted: function(el, binding) { el.addEventListener(...","datePublished":"2020-05-12T20:21:32+08:00","dateModified":"2026-04-17T11:19:42+08:00","author":{"@type":"Person","name":"松"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/zi-ding-yi-zhi-ling-directive/","name":"自定义指令directive","position":2}]}</script>
-<meta property="og:title" content="自定义指令directive">
-<meta property="og:description" content="https://juejin.im/post/5eb7fc626fb9a0436a7c6af1 import Vue from 'vue' const preventReClick = Vue.directive('preventReClick', { inserted: function(el, binding) { el.addEventListener(...">
-<meta property="og:url" content="https://zss1004504439.github.io/post/zi-ding-yi-zhi-ling-directive/">
+<link rel="canonical" href="https://zss1004504439.github.io/post/nestjssheng-ming-zhou-qi/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"nestjs生命周期","url":"https://zss1004504439.github.io/post/nestjssheng-ming-zhou-qi/","description":"","datePublished":"2026-05-12T14:48:10+08:00","dateModified":"2026-05-12T14:48:10+08:00","author":{"@type":"Person","name":"松"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/images/avatar.png"},"name":"松"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://zss1004504439.github.io","name":"松","position":1},{"@type":"ListItem","item":"https://zss1004504439.github.io/post/nestjssheng-ming-zhou-qi/","name":"nestjs生命周期","position":2}]}</script>
+<meta property="og:title" content="nestjs生命周期">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://zss1004504439.github.io/post/nestjssheng-ming-zhou-qi/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="松">
 <meta property="og:image" content="/images/avatar.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://zss1004504439.github.io/post/zi-ding-yi-zhi-ling-directive/">
-<meta name="twitter:title" content="自定义指令directive">
-<meta name="twitter:description" content="https://juejin.im/post/5eb7fc626fb9a0436a7c6af1 import Vue from 'vue' const preventReClick = Vue.directive('preventReClick', { inserted: function(el, binding) { el.addEventListener(...">
+<meta name="twitter:url" content="https://zss1004504439.github.io/post/nestjssheng-ming-zhou-qi/">
+<meta name="twitter:title" content="nestjs生命周期">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="/images/avatar.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJ9JHRFE8M"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VJ9JHRFE8M');</script>
@@ -136,10 +135,10 @@
     
 <article class="article-container">
   <header class="article-header">
-    <h1 class="article-title">自定义指令directive</h1>
+    <h1 class="article-title">nestjs生命周期</h1>
     <div class="article-meta">
       
-      <span class="article-meta__item">2020-05-12</span>
+      <span class="article-meta__item">2026-05-12</span>
       
       <span class="article-meta__sep">·</span>
       <span class="article-meta__item">1 分钟阅读</span>
@@ -151,54 +150,27 @@
   
 
   <div class="article-content">
-    <p><a href="https://juejin.im/post/5eb7fc626fb9a0436a7c6af1">https://juejin.im/post/5eb7fc626fb9a0436a7c6af1</a></p>
-<pre><code class="language-js">import Vue from 'vue'
-
-const preventReClick = Vue.directive('preventReClick', {
-  inserted: function(el, binding) {
-    el.addEventListener('click', () =&gt; {
-      if (!el.disabled) {
-        el.disabled = true
-        setTimeout(() =&gt; {
-          el.disabled = false
-        }, binding.value || 3000) // 传入绑定值就使用，默认3000毫秒内不可重复触发
-      }
-    })
-  }
-})
-
-export { preventReClick }
-
-</code></pre>
-<pre><code class="language-js">import preventReClick from './plugins/directives.js' //防多次点击，重复提交
-</code></pre>
-<pre><code class="language-js">// 指定延迟1000ms
-&lt;el-button  size=&quot;small&quot; type=&quot;primary&quot; @click=&quot;handleSave()&quot; v-preventReClick=&quot;1000&quot;&gt;保 存&lt;/el-button&gt;
-
-// 默认延迟时间3000
-&lt;el-button  size=&quot;small&quot; type=&quot;primary&quot; @click=&quot;handleSave()&quot; v-preventReClick&gt;保 存&lt;/el-button&gt;
-
-</code></pre>
+    <p><img src="/post-images/1778568526478149600_0.webp" alt="" /></p>
 
   </div>
 
   
   <nav class="post-nav">
     
-    <a href="/post/zi-ding-yi-zhi-ling-directive-biao-dan-an-niu-chong-fu-ti-jiao/" class="post-nav-card post-nav-card--prev">
+    <a href="/post/nitro-huan-cun-maxage-he-stalemaxage-qu-bie/" class="post-nav-card post-nav-card--prev">
       
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">上一篇</span>
-        <span class="post-nav-card__title">自定义指令directive 表单按钮重复提交</span>
+        <span class="post-nav-card__title">Nitro 缓存 maxAge 和 staleMaxAge 区别</span>
       </div>
       <span class="post-nav-card__arrow">&larr;</span>
     </a>
     
     
-    <a href="/post/treenest/" class="post-nav-card post-nav-card--next">
+    <a href="/post/dan-ti-dao-monorepo/" class="post-nav-card post-nav-card--next">
       <div class="post-nav-card__body">
         <span class="post-nav-card__label meta-text">下一篇</span>
-        <span class="post-nav-card__title">treeNest</span>
+        <span class="post-nav-card__title">单体到Monorepo</span>
       </div>
       
       <span class="post-nav-card__arrow">&rarr;</span>
